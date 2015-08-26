@@ -20,7 +20,7 @@ public class selectionSort {
               } // end parent loop
             
             for(int i=0;i<ara.length;i++){
-             //   System.out.print(ara[i]+" ");
+               System.out.print(ara[i]+" ");
             }
     }
 }
