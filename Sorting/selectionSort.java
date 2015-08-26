@@ -17,7 +17,6 @@ public class selectionSort {
                         ara[i] = ara[minIndex];
                         ara[minIndex] = tmp;
                     }
-                      System.out.println();
               } // end parent loop
             
             for(int i=0;i<ara.length;i++){
