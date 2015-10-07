@@ -1,3 +1,11 @@
+/**
+ *Merge sort :
+ *  avg case : O(nlogn)
+ *  worst case: O(nlogn)
+ * 
+ * @author Shohan
+ * 
+ */
 import java.util.*;
 
 class MergeSort{
