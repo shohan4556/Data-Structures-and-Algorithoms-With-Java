@@ -5,16 +5,17 @@ Find(int n) : Find a node the tree with value n. Its O(lgn)
                 --> iterative way 
                 --> recursive way    
 
-Delete (int n) : Delete a node the tree with value n. Its O(lgn)
-          (a) : node to be deleted is a leaf node (no child)
-
 Traverse(): Traverse Tree 
+
+Coming soon
+Delete (int n) : Delete a node the tree with value n. Its O(lgn)
+
  */
 
 /**
  *
  * @author shohan
- * implement Binary Tree
+ * I make it happen. 
  */
 
 class Node{
