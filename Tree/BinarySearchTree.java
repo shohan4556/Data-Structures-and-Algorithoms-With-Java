@@ -2,8 +2,11 @@
  Insert(int n) : Add a node the tree with value n. Its O(lgn)
 
 Find(int n) : Find a node the tree with value n. Its O(lgn)
+                --> iterative way 
+                --> recursive way    
 
 Delete (int n) : Delete a node the tree with value n. Its O(lgn)
+          (a) : node to be deleted is a leaf node (no child)
 
 Traverse(): Traverse Tree 
  */
@@ -36,8 +39,10 @@ public class BinarySearchTree {
                  root = newNode;
                  return;
              }
+             
              Node current = root;
              Node parent = null;
+             
              while(true){
                  parent = current;
                  if(id<current.data){ // go left
@@ -65,7 +70,7 @@ public class BinarySearchTree {
              }
          }
          
-         boolean find(int val){
+         boolean find(int val){ // iterative way
              Node current = root;
                     while(current!=null){
                             if(current.data == val)
@@ -80,6 +85,18 @@ public class BinarySearchTree {
                     return false;
          }
          
+               boolean search(Node root, int id){ // recursive way
+               
+                if(root == null)
+                    return false;
+                else if(root.data == id)
+                    return true;
+                else if(id<root.data)
+                   return search(root.left,id);
+                else
+                   return search(root.right,id);                
+         }
+         
     public static void main(String args[]){
         
       BinarySearchTree myBST = new BinarySearchTree();
@@ -89,6 +106,7 @@ public class BinarySearchTree {
       myBST.insertNode(50);
       
       myBST.displayTree(myBST.root);
+      
       if(myBST.find(50) == true){
           System.out.println("Found");
       }
