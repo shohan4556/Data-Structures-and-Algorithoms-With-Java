@@ -7,19 +7,23 @@ class matrixRep{
 			int edges,nodes,u,v;
 			Scanner in = new Scanner(System.in);
 			
-			prln("Enter Number of Nodes.");
+			pr("Enter Number of Nodes : ");
 			nodes = in.nextInt();
-			prln("Enter Number of Edges");
+			pr("Enter Number of Edges : ");
 			edges = in.nextInt();
 			prln("Enter The Graph");
 			
-			for(int i=0;i<edges;i++){
-				u = in.nextInt();
-				v = in.nextInt();
-				matrix[u][v] = 1;
+			for(int i=0;i<nodes;i++){
+				for(int j=0;j<nodes;j++){
+				//u = in.nextInt();
+				//v = in.nextInt();
+				int tmp = in.nextInt();
+				matrix[i][j] = tmp;
+			  }
 			}
 			
 			// display matrix
+			prln("Dsiplay Matrix");
 			for(int i=0;i<nodes;i++){
 				 System.out.print(i+"-->");
 				for(int j=0;j<nodes;j++){
@@ -32,5 +36,8 @@ class matrixRep{
 	}
 	public static void prln(Object a){
 		System.out.println(a);
+	}
+	public static void pr(Object a){
+		System.out.print(a);
 	}	
 }
